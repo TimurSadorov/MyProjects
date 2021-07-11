@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelaunayTriangulationBySweepingLineMethod", "DelaunayTriangulationBySweepingLineMethod\DelaunayTriangulationBySweepingLineMethod.csproj", "{620E2234-3658-4069-85AD-3EF1FD002187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangulation", "Triangulation\Triangulation.csproj", "{5047BEDD-B2AF-48E6-A2FC-D0D5708B572D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{620E2234-3658-4069-85AD-3EF1FD002187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620E2234-3658-4069-85AD-3EF1FD002187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620E2234-3658-4069-85AD-3EF1FD002187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620E2234-3658-4069-85AD-3EF1FD002187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5047BEDD-B2AF-48E6-A2FC-D0D5708B572D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5047BEDD-B2AF-48E6-A2FC-D0D5708B572D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5047BEDD-B2AF-48E6-A2FC-D0D5708B572D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5047BEDD-B2AF-48E6-A2FC-D0D5708B572D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E36BA04-6710-4561-BF1C-BFB57C7A2514}
+	EndGlobalSection
+EndGlobal

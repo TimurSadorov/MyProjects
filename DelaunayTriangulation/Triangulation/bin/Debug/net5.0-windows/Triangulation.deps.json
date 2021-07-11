@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Triangulation/1.0.0": {
+        "dependencies": {
+          "DelaunayTriangulationBySweepingLineMethod": "1.0.0"
+        },
+        "runtime": {
+          "Triangulation.dll": {}
+        }
+      },
+      "DelaunayTriangulationBySweepingLineMethod/1.0.0": {
+        "runtime": {
+          "DelaunayTriangulationBySweepingLineMethod.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Triangulation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DelaunayTriangulationBySweepingLineMethod/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
