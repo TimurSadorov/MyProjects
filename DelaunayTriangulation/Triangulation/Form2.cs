@@ -59,7 +59,7 @@ namespace Triangulation
             var g = pictureBox1.CreateGraphics();
             var result = DelaunayTriangulator.CalculateDelaunayTriangulation(points);
             foreach (var edge in result)
-                g.DrawLine(pens[r.Next(pens.Length)], edge.Vertex1, edge.Vertex2);
+                g.DrawLine(pen, edge.Vertex1, edge.Vertex2);
         }
     }
 }

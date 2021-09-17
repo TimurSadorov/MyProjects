@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gU8gFL7ryXCD5yEbA7f4qmvKu9eRly/Ghcvm5xZhnHfeovhS/s4/w/aJlBUnBCVusL2jFqqByhnEmgkT/WMUvA==",
+  "dgSpecHash": "vBCdAf7erLsg3jpeLwXyfS5vyajTQX5FTV0z+rx80wv0FmE2vVXZriDIpA69y9BEBPwdjdBOecJhSKBLnohgxQ==",
   "success": true,
-  "projectFilePath": "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\TestTrees\\TestTrees.csproj",
+  "projectFilePath": "C:\\Repository\\MyProjects\\BTree\\TestTrees\\TestTrees.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sador\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
@@ -17,7 +17,7 @@
     "C:\\Users\\sador\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\sador\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\sador\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",

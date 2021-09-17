@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {}
+    "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
+    "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+        "projectUniqueName": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
         "projectName": "DelaunayTriangulationBySweepingLineMethod",
-        "projectPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+        "projectPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
         "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
+        "outputPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

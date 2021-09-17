@@ -4640,20 +4640,20 @@
   },
   "packageFolders": {
     "C:\\Users\\sador\\.nuget\\packages\\": {},
-    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\TestTrees\\TestTrees.csproj",
+      "projectUniqueName": "C:\\Repository\\MyProjects\\BTree\\TestTrees\\TestTrees.csproj",
       "projectName": "TestTrees",
-      "projectPath": "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\TestTrees\\TestTrees.csproj",
+      "projectPath": "C:\\Repository\\MyProjects\\BTree\\TestTrees\\TestTrees.csproj",
       "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-      "outputPath": "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\TestTrees\\obj\\",
+      "outputPath": "C:\\Repository\\MyProjects\\BTree\\TestTrees\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
@@ -4673,8 +4673,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\BTree\\BTree.csproj": {
-              "projectPath": "E:\\Repository\\sadorov_11009\\2021\\SPRING\\AISD\\SEM\\BTree\\BTree\\BTree.csproj"
+            "C:\\Repository\\MyProjects\\BTree\\BTree\\BTree.csproj": {
+              "projectPath": "C:\\Repository\\MyProjects\\BTree\\BTree\\BTree.csproj"
             }
           }
         }
@@ -4717,7 +4717,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pa8C1GO1yhK9gvMq3c1tS72zFoscUc5AsQw3QBbHUoFRdWMbbn4OSbotUNsehEhdFdoKpm0CucYYCGmjie6ynA==",
+  "dgSpecHash": "/1I6/KojYVjgx5raduO9uvetwajIZGcHlTT3ThnyBavtDPu8a5bl5Wq4gcAuj8sejYo40Bx65x30iUTNpRVjFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
+  "projectFilePath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
