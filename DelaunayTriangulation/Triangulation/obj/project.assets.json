@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
+      "projectUniqueName": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
       "projectName": "Triangulation",
-      "projectPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
+      "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
       "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\Triangulation\\obj\\",
+      "outputPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -61,8 +61,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
-              "projectPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj"
+            "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
+              "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj"
             }
           }
         }

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+      "projectUniqueName": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
       "projectName": "DelaunayTriangulationBySweepingLineMethod",
-      "projectPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+      "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
       "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
+      "outputPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

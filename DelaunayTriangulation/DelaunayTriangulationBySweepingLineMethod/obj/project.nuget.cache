@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGCIqdNoeFWD7kaSapttjzjJBDQUXQ/2lU6s6yrcEYYwDp8epr7NZBoC937BRaG4Klq6YlbjqdfWhc/P8aa1ZQ==",
+  "dgSpecHash": "BePqrzNNhzfpVKy6rGtoVOGaMV//s/1Xmtqwjl7S7YpgiHI52HVEB+ll95ht+Xy3UuB37aUgdXA+vlS1Uy8v8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sador\\source\\repos\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+  "projectFilePath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
