@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "KnoK41iiTQmLjok7Bg3qOhO7SF48I5qFIZLp3sKr6BYeEOB1aasQWj/GX4ueMTetsq/67ntKcFdta07Fp1B7gQ==",
   "success": true,
   "projectFilePath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+=======
+  "dgSpecHash": "BePqrzNNhzfpVKy6rGtoVOGaMV//s/1Xmtqwjl7S7YpgiHI52HVEB+ll95ht+Xy3UuB37aUgdXA+vlS1Uy8v8Q==",
+  "success": true,
+  "projectFilePath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
+>>>>>>> 3fa49638a6c898201897090cc4fc40d46fb1f76e
   "expectedPackageFiles": [],
   "logs": []
 }

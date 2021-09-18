@@ -34,11 +34,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
       "projectName": "Triangulation",
       "projectPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
       "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
       "outputPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\obj\\",
+=======
+      "projectUniqueName": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
+      "projectName": "Triangulation",
+      "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
+      "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
+      "outputPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\obj\\",
+>>>>>>> 3fa49638a6c898201897090cc4fc40d46fb1f76e
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -61,8 +69,13 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
               "projectPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj"
+=======
+            "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
+              "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj"
+>>>>>>> 3fa49638a6c898201897090cc4fc40d46fb1f76e
             }
           }
         }
