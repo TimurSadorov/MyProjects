@@ -9,7 +9,7 @@ namespace DelaunayTriangulationBySweepingLineMethod
         static void Main(string[] args)
         {
             var t = new TimeMeter();
-            Console.WriteLine(t.MeasureTriangulationExecutionTimeInMs(10, 1000000));
+            Console.WriteLine(t.MeasureTriangulationExecutionTimeInMs(1, 100000));
         }
     }
 }

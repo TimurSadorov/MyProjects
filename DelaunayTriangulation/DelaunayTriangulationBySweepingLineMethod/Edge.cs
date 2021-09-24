@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace DelaunayTriangulationBySweepingLineMethod
 {
-    public struct Edge
+    public class Edge
     {
         public readonly PointF Vertex1;
         public readonly PointF Vertex2;

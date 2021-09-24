@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {}
-  },
-  "projects": {
-    "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
-        "projectName": "DelaunayTriangulationBySweepingLineMethod",
-        "projectPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
-        "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-        "outputPath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
-=======
     "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj": {}
   },
   "projects": {
@@ -25,23 +12,14 @@
         "projectPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\DelaunayTriangulationBySweepingLineMethod.csproj",
         "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
         "outputPath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\DelaunayTriangulationBySweepingLineMethod\\obj\\",
->>>>>>> 3fa49638a6c898201897090cc4fc40d46fb1f76e
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sador\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\sador\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

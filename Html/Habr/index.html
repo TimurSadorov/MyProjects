@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="icon" href="image/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
     
         <title>Все публикации подряд / Хабр</title>
     </head>
@@ -21,59 +22,631 @@
                 </div>
             </div>
         </header>
-        <div class="page_navigate">
-            <div class="page_width">
-                <div class="nav_menu">
-                    <div class="main_nav_menu">
-                        <div class="main_nav_menu_selections">
-                            <nav class="navigate">
-                                <a class="nav_item active" href="">Все потоки</a>
-                                <a href="" class="nav_item">Разработка</a>
-                                <a href="" class="nav_item">Администрирование</a>
-                                <a href="" class="nav_item">Дизайн</a>
-                                <a href="" class="nav_item">Менеджмент</a>
-                                <a href="" class="nav_item">Маркетинг</a>
-                                <a href="" class="nav_item">Научпоп</a>
-                            </nav>
+        <div>
+            <div class="page_navigate">
+                <div class="page_width">
+                    <div class="nav_menu">
+                        <div class="main_nav_menu">
+                            <div class="main_nav_menu_selection">
+                                <nav class="navigate">
+                                    <a class="nav_item active" href="">Все потоки</a>
+                                    <a href="" class="nav_item">Разработка</a>
+                                    <a href="" class="nav_item">Администрирование</a>
+                                    <a href="" class="nav_item">Дизайн</a>
+                                    <a href="" class="nav_item">Менеджмент</a>
+                                    <a href="" class="nav_item">Маркетинг</a>
+                                    <a href="" class="nav_item">Научпоп</a>
+                                </nav>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav_user">
-                        <svg display="none">
-                            <symbol id="profile" viewBox="0 0 512 512">
-                                <g>
-                                    <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
-                                        C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
-                                        c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
-                                        h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
-                                        c59.551,0,108,48.448,108,108S315.551,256,256,256z"/>
-                                </g>
-                            </symbol>
-                            <symbol id="search" viewBox="0 0 612.01 612.01">
-                                <g>
-                                    <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
-                                        C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
-                                        l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
-                                        c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
-                                        S377.82,467.8,257.493,467.8z"/>
-                                </g>
-                            </symbol>
-                        </svg>
-                        <a class="nav_user_item search" href="#" title="Поиск">
-                            <svg class="nav_user_item_icon">
-                                <use xlink:href="#search"></use>
-                            </svg>
-                        </a>
-                        <div class="nav_user_item profile">
-                            <svg class="nav_user_item_icon">
-                                <use xlink:href="#profile"></use>
-                            </svg>
+                        <div class="nav_user">
+                            <a class="nav_user_item search" href="#" title="Поиск">
+                                <svg class="nav_user_item_icon search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </a>
+                            <div class="nav_user_item profile" title="Профиль">
+                                <svg class="nav_user_item_icon">
+                                    <use xlink:href="#profile"></use>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div> 
-       
+            <main>
+                <div class="main_page">
+                    <div class="page_width">
+                        <div class="main_page_content">
+                            <div class="main_page_posts_size">
+                                <div class="main_page_posts">
+                                    <div class="main_page_element">
+                                        <div class="main_page_posts_top_content" >
+                                            <div class="main_page_posts_top_content container_for_title">
+                                                <h1 class="main_page_posts_top_content container title">Все потоки</h1>
+                                            </div>
+                                            <div class="main_page_posts_top_content container_for_navigate">
+                                                <div class="main_page_posts_top_content container_for_navigate content">
+                                                    <a class="main_page_posts_top_content container_for_navigate content_item active" href="#">статьи</a>
+                                                    <a class="main_page_posts_top_content container_for_navigate content_item" href="#">новости</a>
+                                                    <a class="main_page_posts_top_content container_for_navigate content_item" href="#">хабы</a>
+                                                    <a class="main_page_posts_top_content container_for_navigate content_item" href="#">авторы</a>
+                                                    <a class="main_page_posts_top_content container_for_navigate content_item" href="#">компании</a>
+                                                </div>
+                                            </div>
+                                            <div class="main_page_posts_top_content filter">
+                                                <div class="main_page_posts_top_content filter_decoration">
+                                                    <div class="main_page_posts_top_content filter_container">
+                                                        <div class="main_page_posts_top_content filter_dropdown">
+                                                            <button class="main_page_posts_top_content filter_dropdown_button">
+                                                                Все подряд
+                                                                <svg class="main_page_posts_top_content filter_dropdown_icon">
+                                                                    <use xlink:href="#dropdown"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <button class="main_page_posts_top_content filter_rss_button" title="Скопировать ссылку на RSS">
+                                                            <svg class="main_page_posts_top_content filter_rss_icon">
+                                                                <use xlink:href="#rss"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_page_element">
+                                        <div class="scrollable_posts">
+                                            <div class="posts">
+                                                <div class="post_decoration">
+                                                    <div class="post">
+                                                        <div class="post_main">
+                                                            <div class="post_author_and_date_container">
+                                                                <div class="post_author_and_date_contant">
+                                                                    <div class="post_author">
+                                                                        <div class="post_author_photo_container">
+                                                                            <a href="#" title="Big_brother"><img class="post_author_photo" src="/image/users_photo/Big_brother.jpg" 
+                                                                                alt="Фото пользователя"></a>
+                                                                        </div>
+                                                                        <div class="post_author_name_container">
+                                                                            <a class="post_author_name" href="#">Big_brother</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="post_date_container">
+                                                                        <time class="post_date" title="2021-09-19, 01:41">сегодня в 01:41</time>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <h2 class="post_header">
+                                                                <a href="#">
+                                                                    Про многопоточность 2. GCD
+                                                                </a>
+                                                            </h2>
+                                                            <div class="post_hubs">
+                                                                <a class="post_hubs_item" href="#">Разработка под iOS *</a>
+                                                                <a class="post_hubs_item" href="#">Разработка мобильных приложений *</a>
+                                                            </div>
+                                                            <div class="post_information">
+                                                                <div class="post_image">
+                                                                    <img src="image/posts/post1.png" alt="Фотография поста">
+                                                                </div>
+                                                                <div class="post_text">
+                                                                    <p>
+                                                                        Привет! Вот и новая часть серии статей про многопоточность дождалась своей очереди (ну вы поняли, да, типа очередь статей последовательная (͡° ͜ʖ ͡°) ). В этот раз мы поднимемся на ступеньку выше, рассмотрим фреймфорк Dispatch, разберем большую часть GCD примитивов, распространенные проблемы и поищем решения.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="link_on_post">
+                                                                    <a href="#">Читать далее</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post_popularity">
+                                                            <div class="post_popularity_item">
+                                                                <svg class="rating_icon">
+                                                                    <title>Рейтинг</title>
+                                                                    <use xlink:href="#rating"></use>
+                                                                </svg>
+                                                                <span class="popularity_items_value">0</span>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <svg class="view_icon">
+                                                                    <title>Просмотры</title>
+                                                                    <use xlink:href="#views"></use>
+                                                                </svg>
+                                                                <span class="popularity_items_value" title="Количество просмотров">
+                                                                    228</span>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <button class="bookmark">
+                                                                    <svg class="bookmark_icon">
+                                                                        <title>Добавить в закладки</title>
+                                                                        <use xlink:href="#bookmark"></use>
+                                                                    </svg>
+                                                                    <span class="popularity_items_value" 
+                                                                    title="Количество пользователей, добавивших публикацию в закладки">1</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <a class="comments_of_post" href="#">
+                                                                    <svg class="comment_icon">
+                                                                        <title>Комментарии</title>
+                                                                        <use xlink:href="#comments"></use>
+                                                                    </svg>
+                                                                    <span class="popularity_items_value" 
+                                                                    title="Читать комментарии">0</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_page_element">
+                                        <div class="news_container">
+                                            <div class="news_header_container">
+                                                <h2 class="news_header">новости</h2>
+                                            </div>
+                                            <div class="news_conent_container">
+                                                <div class="news_conent">
+                                                    <div class="news_item">
+                                                        <div class="news_item_title_container">
+                                                            <a href="#" class="news_item_title">Экипаж SpaceX Inspiration4 столкнулся с проблемами при пользовании космическим туалетом</a>
+                                                        </div>
+                                                        <div class="news_item_date_and_comments_container">
+                                                            <div class="news_item_date_and_comments_item">
+                                                               <span title="2021-09-21, 21:05">вчера в 21:05</span>
+                                                               <div class="dot_separator_cont">•</div>
+                                                               <a href="#" class="news_item_comment">Комментарии: 2</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="news_item">
+                                                        <div class="news_item_title_container">
+                                                            <a href="#" class="news_item_title">Электро-самолет от Rolls-Royce – “Дух инноваций”</a>
+                                                        </div>
+                                                        <div class="news_item_date_and_comments_container">
+                                                            <div class="news_item_date_and_comments_item">
+                                                               <span title="2021-09-21, 19:00">вчера в 19:00</span>
+                                                               <div class="dot_separator_cont">•</div>
+                                                               <a href="#" class="news_item_comment">Комментарии: 2</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="news_item">
+                                                        <div class="news_item_title_container">
+                                                            <a href="#" class="news_item_title">Сотрудники Google раскритиковали компанию за уступки Кремлю и блокировку «Умного голосования»</a>
+                                                        </div>
+                                                        <div class="news_item_date_and_comments_container">
+                                                            <div class="news_item_date_and_comments_item">
+                                                               <span title="2021-09-21, 18:56">вчера в 18:56</span>
+                                                               <div class="dot_separator_cont">•</div>
+                                                               <a href="#" class="news_item_comment">Комментарии: 9</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="news_item">
+                                                        <div class="news_item_title_container">
+                                                            <a href="#" class="news_item_title">Forbes: Avito планирует купить «Циан»</a>
+                                                        </div>
+                                                        <div class="news_item_date_and_comments_container">
+                                                            <div class="news_item_date_and_comments_item">
+                                                               <span title="2021-09-21, 18:27">вчера в 18:27</span>
+                                                               <div class="dot_separator_cont">•</div>
+                                                               <a href="#" class="news_item_comment">Комментарии: 7</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="news_item">
+                                                        <div class="news_item_title_container">
+                                                            <a href="#" class="news_item_title">Завершается ИКТ-конкурс «Месяц знаний»</a>
+                                                        </div>
+                                                        <div class="news_item_date_and_comments_container">
+                                                            <div class="news_item_date_and_comments_item">
+                                                               <span title="2021-09-21, 18:18">вчера в 18:18</span>
+                                                               <div class="dot_separator_cont">•</div>
+                                                               <a href="#" class="news_item_comment">Комментарии: 0</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="more_news_container">
+                                                    <button class="more_news_button">
+                                                        Показать еще
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_page_element">
+                                        <div class="scrollable_posts">
+                                            <div class="posts">
+                                                <div class="post_decoration">
+                                                    <div class="post">
+                                                        <div class="post_main">
+                                                            <div class="post_author_and_date_container">
+                                                                <div class="post_author_and_date_contant">
+                                                                    <div class="post_author">
+                                                                        <div class="post_author_photo_container">
+                                                                            <a href="#" title="amir_voln"><img class="post_author_photo" src="/image/users_photo/amir_voln.jpg" 
+                                                                                alt="Фото пользователя"></a>
+                                                                        </div>
+                                                                        <div class="post_author_name_container">
+                                                                            <a class="post_author_name" href="#">amir_voln</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="post_date_container">
+                                                                        <time class="post_date" title="2021-09-18, 21:54">сегодня в 21:54</time>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <h2 class="post_header">
+                                                                <a href="#">
+                                                                    Япония у вас в руках: от оригами до электроники — один шаг
+                                                                </a>
+                                                            </h2>
+                                                            <div class="post_hubs">
+                                                                <a class="post_hubs_item" href="#">Блог компании SkillFactory</a>
+                                                                <a class="post_hubs_item" href="#">Rust *</a>
+                                                                <a href="#" class="post_hubs_item">FPGA *</a>
+                                                                <a href="#" class="post_hubs_item">Схемотехника *</a>
+                                                                <a href="#" class="post_hubs_item">DIY или Сделай сам</a>
+                                                            </div>
+                                                            <div class="snippet_lables_container">
+                                                                <div class="snippet_lable">Перевод</div>
+                                                                <div class="snippet_lable">Tutorial</div>
+                                                            </div>
+                                                            <div class="post_information">
+                                                                <div class="post_image">
+                                                                    <img src="image/posts/post1.png" alt="Фотография поста">
+                                                                </div>
+                                                                <div class="post_text">
+                                                                    <p>
+                                                                        Привет! Вот и новая часть серии статей про многопоточность дождалась своей очереди (ну вы поняли, да, типа очередь статей последовательная (͡° ͜ʖ ͡°) ). В этот раз мы поднимемся на ступеньку выше, рассмотрим фреймфорк Dispatch, разберем большую часть GCD примитивов, распространенные проблемы и поищем решения.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="link_on_post">
+                                                                    <a href="#">Читать далее</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post_popularity">
+                                                            <div class="post_popularity_item">
+                                                                <svg class="rating_icon">
+                                                                    <title>Рейтинг</title>
+                                                                    <use xlink:href="#rating"></use>
+                                                                </svg>
+                                                                <span class="popularity_items_value">0</span>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <svg class="view_icon">
+                                                                    <title>Просмотры</title>
+                                                                    <use xlink:href="#views"></use>
+                                                                </svg>
+                                                                <span class="popularity_items_value" title="Количество просмотров">
+                                                                    228</span>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <button class="bookmark">
+                                                                    <svg class="bookmark_icon">
+                                                                        <title>Добавить в закладки</title>
+                                                                        <use xlink:href="#bookmark"></use>
+                                                                    </svg>
+                                                                    <span class="popularity_items_value" 
+                                                                    title="Количество пользователей, добавивших публикацию в закладки">1</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="post_popularity_item">
+                                                                <a class="comments_of_post" href="#">
+                                                                    <svg class="comment_icon">
+                                                                        <title>Комментарии</title>
+                                                                        <use xlink:href="#comments"></use>
+                                                                    </svg>
+                                                                    <span class="popularity_items_value" 
+                                                                    title="Читать комментарии">0</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar">
+                                <div class="sidebar_sticky">
+                                    <section>
+                                        <header class="sidebar_title_container">
+                                            <h2 class="sidebar_title">лучшие блоги</h2>
+                                        </header>
+                                        <div class="sidebar_body">
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/ruvds.png" alt="блог">
+                                                <div class="blog_title">RUVDS.com</div>
+                                                <div class="blog_rating">2428.09</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/selectel.png" alt="блог">
+                                                <div class="blog_title">Selectel</div>
+                                                <div class="blog_rating">1311.03</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/timeweb.jpg" alt="блог">
+                                                <div class="blog_title">Timeweb</div>
+                                                <div class="blog_rating">765.03</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/gk_lanit.jpg" alt="блог">
+                                                <div class="blog_title">ГК ЛАНИТ</div>
+                                                <div class="blog_rating">640.8</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/it_soft.png" alt="блог">
+                                                <div class="blog_title">IT SOFT</div>
+                                                <div class="blog_rating">634.43</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/oleg_bunin_conference.jpg" alt="блог">
+                                                <div class="blog_title">Конференции Олега Бунина(Онтико)</div>
+                                                <div class="blog_rating">629.63</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/hubr.png" alt="блог">
+                                                <div class="blog_title">Хабр</div>
+                                                <div class="blog_rating">628.16</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/jug_ru_group.png" alt="блог">
+                                                <div class="blog_title">JUG Ru Group</div>
+                                                <div class="blog_rating">618.57</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/yandex.png" alt="блог">
+                                                <div class="blog_title">Яндекс</div>
+                                                <div class="blog_rating">555.29</div>
+                                            </a>
+                                            <a class="blog" href="#">
+                                                <img class="blog_image" src="/image/blogs/homeClick.jpg" alt="блог">
+                                                <div class="blog_title">ДомКлик</div>
+                                                <div class="blog_rating">393.59</div>
+                                            </a>
+                                        </div>
+                                        <footer class="footer_container">
+                                            <a class="footer_content" href="#">Все компании</a>
+                                        </footer>
+                                    </section>
+                                    <section class="sidebar_read_now">
+                                        <header class="sidebar_title_container">
+                                            <h2 class="sidebar_title">читают сейчас</h2>
+                                        </header>
+                                        <div class="sidebar_body">
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        Google требует удалить google-документы со списками «Умного голосования» [Обновлено 22:05 по МСК]
+                                                    </a>
+                                                </h2>
+                                                <div class="post_readers_now views_and_comments">
+                                                    <div class="post_popularity_item">
+                                                        <svg class="view_icon">
+                                                            <title>Просмотры</title>
+                                                            <use xlink:href="#views"></use>
+                                                        </svg>
+                                                        <span class="popularity_items_value" title="Количество просмотров">
+                                                            2.8К</span>
+                                                    </div>
+                                                    <div class="post_popularity_item">
+                                                        <a class="comments_of_post" href="#">
+                                                            <svg class="comment_icon">
+                                                                <title>Комментарии</title>
+                                                                <use xlink:href="#comments"></use>
+                                                            </svg>
+                                                            <span class="popularity_items_value" 
+                                                            title="Читать комментарии">5</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        В чём разница между Debian и Ubuntu? Что лучше выбрать?
+                                                    </a>
+                                                </h2>
+                                                <div class="post_readers_now views_and_comments">
+                                                    <div class="post_popularity_item">
+                                                        <svg class="view_icon">
+                                                            <title>Просмотры</title>
+                                                            <use xlink:href="#views"></use>
+                                                        </svg>
+                                                        <span class="popularity_items_value" title="Количество просмотров">
+                                                            3.9К</span>
+                                                    </div>
+                                                    <div class="post_popularity_item">
+                                                        <a class="comments_of_post" href="#">
+                                                            <svg class="comment_icon">
+                                                                <title>Комментарии</title>
+                                                                <use xlink:href="#comments"></use>
+                                                            </svg>
+                                                            <span class="popularity_items_value" 
+                                                            title="Читать комментарии">2</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        Компиляция без предупреждений — что случилось в Linux-сообществе
+                                                    </a>
+                                                </h2>
+                                                <div class="post_readers_now views_and_comments">
+                                                    <div class="post_popularity_item">
+                                                        <svg class="view_icon">
+                                                            <title>Просмотры</title>
+                                                            <use xlink:href="#views"></use>
+                                                        </svg>
+                                                        <span class="popularity_items_value" title="Количество просмотров">
+                                                            3.6К</span>
+                                                    </div>
+                                                    <div class="post_popularity_item">
+                                                        <a class="comments_of_post" href="#">
+                                                            <svg class="comment_icon">
+                                                                <title>Комментарии</title>
+                                                                <use xlink:href="#comments"></use>
+                                                            </svg>
+                                                            <span class="popularity_items_value" 
+                                                            title="Читать комментарии">6</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        Как я проходила очередное собеседование и не прошла
+                                                    </a>
+                                                </h2>
+                                                <div class="post_readers_now views_and_comments">
+                                                    <div class="post_popularity_item">
+                                                        <svg class="view_icon">
+                                                            <title>Просмотры</title>
+                                                            <use xlink:href="#views"></use>
+                                                        </svg>
+                                                        <span class="popularity_items_value" title="Количество просмотров">
+                                                            2.9К</span>
+                                                    </div>
+                                                    <div class="post_popularity_item">
+                                                        <a class="comments_of_post" href="#">
+                                                            <svg class="comment_icon">
+                                                                <title>Комментарии</title>
+                                                                <use xlink:href="#comments"></use>
+                                                            </svg>
+                                                            <span class="popularity_items_value" 
+                                                            title="Читать комментарии">2</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        ВМС США убирает в дальний ящик создание Railgun
+                                                    </a>
+                                                </h2>
+                                                <div class="post_readers_now views_and_comments">
+                                                    <div class="post_popularity_item">
+                                                        <svg class="view_icon">
+                                                            <title>Просмотры</title>
+                                                            <use xlink:href="#views"></use>
+                                                        </svg>
+                                                        <span class="popularity_items_value" title="Количество просмотров">
+                                                            12К</span>
+                                                    </div>
+                                                    <div class="post_popularity_item">
+                                                        <a class="comments_of_post" href="#">
+                                                            <svg class="comment_icon">
+                                                                <title>Комментарии</title>
+                                                                <use xlink:href="#comments"></use>
+                                                            </svg>
+                                                            <span class="popularity_items_value" 
+                                                            title="Читать комментарии">45</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_readers_now">
+                                                <h2>
+                                                    <a href="#" class="post_readers_now content">
+                                                        Халк, Илья Муромец и другие герои в мире финтеха
+                                                    </a>
+                                                </h2>
+                                                <div class="snippet_lable">Мегатест</div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </div>
+    <svg display="none">
+        <symbol id="profile" viewBox="0 0 512 512">
+            <g>
+                <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+                    C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+                    c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+                    h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+                    c59.551,0,108,48.448,108,108S315.551,256,256,256z"/>
+            </g>
+        </symbol>
+        <symbol id="search" viewBox="0 0 612.01 612.01">
+            <g>
+                <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+                    C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+                    l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+                    c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+                    S377.82,467.8,257.493,467.8z"/>
+            </g>
+        </symbol>
+        <symbol id="dropdown" viewBox="0 0 612 612">
+            <g>
+                <path d="M604.501,134.782c-9.999-10.05-26.222-10.05-36.221,0L306.014,422.558L43.721,134.782
+                    c-9.999-10.05-26.223-10.05-36.222,0s-9.999,26.35,0,36.399l279.103,306.241c5.331,5.357,12.422,7.652,19.386,7.296
+                    c6.988,0.356,14.055-1.939,19.386-7.296l279.128-306.268C614.5,161.106,614.5,144.832,604.501,134.782z"/>
+            </g>
+        </symbol>
+        <symbol id="rss"  viewBox="0 0 310 310">
+            <g id="XMLID_788_">
+                <path id="XMLID_789_" d="M90.244,264.828C90.244,240.11,70.139,220,45.427,220c-24.715,0-44.822,20.11-44.822,44.828
+                    c0,24.714,20.107,44.82,44.822,44.82C70.139,309.648,90.244,289.542,90.244,264.828z"/>
+                <path id="XMLID_790_" d="M5.648,169.43c35.961,0,69.782,14.066,95.231,39.605c25.45,25.583,39.467,59.648,39.467,95.92
+                    c0,2.762,2.238,5,5,5h57.486c2.762,0,5-2.238,5-5c0-111.952-90.699-203.031-202.185-203.031c-2.762,0-5,2.238-5,5v57.505
+                    C0.648,167.191,2.887,169.43,5.648,169.43z"/>
+                <path id="XMLID_791_" d="M5.726,0c-2.762,0-5,2.238-5,5v57.495c0,2.762,2.238,5,5,5c130.24,0,236.199,106.544,236.199,237.505
+                    c0,2.762,2.238,5,5,5h57.471c2.762,0,5-2.238,5-5C309.396,136.822,173.17,0,5.726,0z"/>
+            </g>
+        </symbol>
+        <symbol id="rating"  viewBox="0 -95 468.23947 468">
+            <g>
+                <path d="m372.585938 100.230469-93.847657-8.707031-37.277343-86.566407c-1.265626-2.9375-4.152344-4.835937-7.347657-4.835937-3.199219 0-6.085937 1.898437-7.351562 4.835937l-37.277344 86.566407-93.847656 8.707031c-3.183594.296875-5.886719 2.457031-6.875 5.496093-.984375 3.039063-.070313 6.371094 2.328125 8.480469l70.800781 62.207031-20.710937 91.949219c-.707032 3.121094.515624 6.359375 3.101562 8.238281 2.585938 1.878907 6.042969 2.035157 8.789062.402344l81.042969-48.125 81.042969 48.121094c2.746094 1.632812 6.203125 1.476562 8.789062-.402344 2.585938-1.878906 3.808594-5.117187 3.101563-8.238281l-20.726563-91.941406 70.800782-62.207031c2.398437-2.109376 3.3125-5.441407 2.324218-8.480469-.984374-3.039063-3.6875-5.199219-6.871093-5.492188zm-80.394532 67.292969c-2.199218 1.933593-3.167968 4.914062-2.523437 7.769531l17.683593 78.46875-69.15625-41.066407c-2.519531-1.496093-5.652343-1.496093-8.171874 0l-69.152344 41.066407 17.683594-78.460938c.648437-2.859375-.320313-5.84375-2.523438-7.777343l-60.425781-53.070313 80.085937-7.429687c2.914063-.269532 5.449219-2.109376 6.609375-4.800782l31.8125-73.871094 31.808594 73.867188c1.160156 2.691406 3.695313 4.53125 6.609375 4.800781l80.085938 7.429688zm0 0"/><path d="m70.074219 144.027344c-3.195313 0-6.082031 1.902344-7.347657 4.835937l-15.769531 36.621094-39.710937 3.679687c-3.171875.300782-5.867188 2.457032-6.851563 5.488282-.988281 3.03125-.082031 6.359375 2.308594 8.472656l29.960937 26.320312-8.765624 38.917969c-.703126 3.117188.519531 6.355469 3.105468 8.234375 2.585938 1.878906 6.039063 2.035156 8.789063.402344l34.28125-20.359375 34.285156 20.359375c2.746094 1.632812 6.203125 1.476562 8.792969-.402344 2.585937-1.878906 3.804687-5.117187 3.097656-8.238281l-8.765625-38.898437 29.960937-26.335938c2.382813-2.109375 3.292969-5.433594 2.308594-8.464844-.984375-3.027344-3.671875-5.1875-6.84375-5.492187l-39.707031-3.679688-15.769531-36.625c-1.265625-2.9375-4.160156-4.839843-7.359375-4.835937zm16.914062 56.953125 25.933594 2.398437-19.570313 17.203125c-2.199218 1.929688-3.167968 4.910157-2.523437 7.765625l5.726563 25.414063-22.398438-13.300781c-2.519531-1.496094-5.65625-1.496094-8.171875 0l-22.402344 13.300781 5.730469-25.417969c.640625-2.855469-.324219-5.835938-2.523438-7.765625l-19.574218-17.203125 25.9375-2.398438c2.914062-.269531 5.449218-2.113281 6.605468-4.800781l10.304688-23.921875 10.300781 23.921875c1.160157 2.695313 3.703125 4.539063 6.625 4.804688zm0 0"/>
+                <path d="m467.847656 194.660156c-.988281-3.039062-3.6875-5.203125-6.871094-5.496094l-39.710937-3.679687-15.769531-36.625c-1.265625-2.933594-4.152344-4.835937-7.347656-4.835937-3.195313 0-6.085938 1.902343-7.347657 4.835937l-15.773437 36.625-39.707032 3.679687c-3.175781.300782-5.867187 2.457032-6.851562 5.492188-.988281 3.03125-.078125 6.359375 2.3125 8.46875l29.957031 26.320312-8.765625 38.917969c-.707031 3.121094.511719 6.359375 3.097656 8.238281 2.589844 1.878907 6.046876 2.035157 8.792969.402344l34.285157-20.359375 34.28125 20.359375c2.75 1.632813 6.203124 1.476563 8.789062-.402344 2.585938-1.878906 3.808594-5.117187 3.105469-8.234374l-8.765625-38.902344 29.960937-26.320313c2.402344-2.109375 3.316407-5.445312 2.328125-8.484375zm-46.398437 25.917969c-2.203125 1.929687-3.167969 4.910156-2.527344 7.765625l5.730469 25.417969-22.402344-13.300781c-2.515625-1.496094-5.652344-1.496094-8.171875 0l-22.398437 13.300781 5.726562-25.414063c.644531-2.855468-.324219-5.835937-2.523438-7.765625l-19.570312-17.203125 25.933594-2.398437c2.917968-.269531 5.449218-2.113281 6.609375-4.800781l10.300781-23.921876 10.304688 23.921876c1.15625 2.6875 3.691406 4.53125 6.605468 4.800781l25.9375 2.398437zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id="views"  viewBox="0 0 487.55 487.55">
+            <g id="XMLID_1992_">
+                <path id="XMLID_2003_" d="M244.625,171.415c-40,0-72.4,32.4-72.4,72.4s32.4,72.4,72.4,72.4s72.4-32.4,72.4-72.4
+                    C316.925,203.815,284.525,171.415,244.625,171.415z M244.625,220.215c-13,0-23.6,10.6-23.6,23.6c0,6-4.8,10.8-10.8,10.8
+                    s-10.8-4.8-10.8-10.8c0-24.9,20.3-45.2,45.2-45.2c6,0,10.8,4.8,10.8,10.8C255.425,215.415,250.525,220.215,244.625,220.215z"/>
+                <path id="XMLID_2012_" d="M481.325,227.515c-224.8-258.6-428-53.9-476.4,2.8c-6.5,7.6-6.6,18.8-0.1,26.4
+                    c221.9,259,423.4,64.6,476.5,3.7C489.625,251.015,489.625,237.015,481.325,227.515z M244.625,346.615
+                    c-56.8,0-102.8-46-102.8-102.8s46-102.8,102.8-102.8s102.8,46,102.8,102.8S301.325,346.615,244.625,346.615z"/>
+            </g>
+        </symbol>
+        <symbol id="bookmark"  viewBox="0 0 431.972 431.972">
+            <g>
+                <path d="M393.146,14.279c-3.713-5.333-8.713-9.233-14.989-11.707c-3.997-1.711-8.186-2.568-12.565-2.568V0H66.378
+                    c-4.377,0-8.562,0.857-12.56,2.568c-6.28,2.472-11.278,6.377-14.989,11.707c-3.71,5.33-5.568,11.228-5.568,17.701v368.019
+                    c0,6.475,1.858,12.371,5.568,17.706c3.711,5.329,8.709,9.233,14.989,11.704c3.994,1.711,8.183,2.566,12.56,2.566
+                    c8.949,0,16.844-3.142,23.698-9.418l125.91-121.062l125.91,121.065c6.663,6.081,14.562,9.127,23.695,9.127
+                    c4.76,0,8.948-0.756,12.565-2.279c6.276-2.471,11.276-6.375,14.989-11.711c3.71-5.328,5.564-11.225,5.564-17.699V31.98
+                    C398.71,25.507,396.852,19.609,393.146,14.279z"/>
+            </g>
+        </symbol>
+        <symbol id="comments"  viewBox="0 0 489 489">
+            <g>
+                <path d="M0,369.747h351.638L437.935,469v-99.253H489V20H0V369.747z M389.824,152.863c21.691,0,39.275,18.81,39.275,42.01
+                    s-17.586,42.01-39.275,42.01s-39.276-18.807-39.276-42.01S368.135,152.863,389.824,152.863z M244.5,152.863
+                    c21.693,0,39.275,18.81,39.275,42.01s-17.586,42.01-39.275,42.01c-21.69,0-39.276-18.807-39.276-42.01
+                    S222.807,152.863,244.5,152.863z M99.176,152.863c21.69,0,39.276,18.807,39.276,42.01c0,23.204-17.586,42.01-39.276,42.01
+                    c-21.693,0-39.276-18.807-39.276-42.01C59.899,171.67,77.483,152.863,99.176,152.863z"/>
+            </g>
+        </symbol>
+    </svg>
 </body>
 </html>

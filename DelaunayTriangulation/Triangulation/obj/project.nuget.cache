@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "/1I6/KojYVjgx5raduO9uvetwajIZGcHlTT3ThnyBavtDPu8a5bl5Wq4gcAuj8sejYo40Bx65x30iUTNpRVjFA==",
-  "success": true,
-  "projectFilePath": "C:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
-=======
-  "dgSpecHash": "1FXf5pGUwsq1evuq7pchJabdeq+O1NYvS3ul5mzM5E0qP3fmqnTkQSkhB9zFoyevzWUUb0O4HjGhuyi6A+fhDw==",
+  "dgSpecHash": "hG8mlpwakagASypv+zV2jjeCb3hmvLIF4U56ChWg8lMBORCdvQzVzCrTcQg4MNnNC9NlswpfsXNdknEhzTH8Ew==",
   "success": true,
   "projectFilePath": "E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\Triangulation.csproj",
->>>>>>> 3fa49638a6c898201897090cc4fc40d46fb1f76e
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Repository\\MyProjects\\DelaunayTriangulation\\Triangulation\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
