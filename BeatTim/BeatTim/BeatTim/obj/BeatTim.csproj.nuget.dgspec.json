@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repository\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj": {}
+    "C:\\Programming\\Development\\Repositories\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj": {}
   },
   "projects": {
-    "E:\\Repository\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj": {
+    "C:\\Programming\\Development\\Repositories\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repository\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj",
+        "projectUniqueName": "C:\\Programming\\Development\\Repositories\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj",
         "projectName": "BeatTim",
-        "projectPath": "E:\\Repository\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj",
-        "packagesPath": "C:\\Users\\sador\\.nuget\\packages\\",
-        "outputPath": "E:\\Repository\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\obj\\",
+        "projectPath": "C:\\Programming\\Development\\Repositories\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\BeatTim.csproj",
+        "packagesPath": "C:\\Users\\Timur\\.nuget\\packages\\",
+        "outputPath": "C:\\Programming\\Development\\Repositories\\MyProjects\\BeatTim\\BeatTim\\BeatTim\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sador\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Timur\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
