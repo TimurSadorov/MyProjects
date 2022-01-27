@@ -1,0 +1,78 @@
+﻿@model EditingProfile
+
+<div class="d-flex flex-column flex-grow-1 ml-100px">
+    <h3 class="align-self-center">Редактирование профиля</h3>
+    <form method="post" class="d-flex flex-column mt-3" enctype="multipart/form-data">
+        <input type="file" asp-for="UserPhoto" id="new-img-user" hidden/>
+        <div class="d-flex flex-row justify-content-between">
+            <div>
+                <label class="fs-5 mb-2">Никнейм</label>
+                <input class="form-control" asp-for="UserProfile.Nickname" id="nickname-input"/>
+                <span asp-validation-for="UserProfile.Nickname"></span>
+            </div>
+            <div>
+                <label class="fs-5 mb-2">Выберете город</label>
+                <input list="cities-list" class="form-control" id="city-input" asp-for="UserProfile.City">
+                <span asp-validation-for="UserProfile.City"></span>
+                <datalist id="cities-list">
+                    @foreach (var city in Model.CityService.GetAllCities())
+                    {
+                        <option value="@city.CityName"></option>
+                    }
+                </datalist>
+            </div>
+        </div>
+        <div class="mt-4">
+            <label class="fs-5 mb-2">Обо мне</label>
+            <textarea class="form-control" rows="6" id="about-me-input" asp-for="UserProfile.AboutMe"></textarea>
+            <span asp-validation-for="UserProfile.AboutMe"></span>
+        </div>
+        <div class="mt-5 d-flex flex-column">
+            <h4>Котнакты</h4>
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <div class="flex-grow-1  me-5">
+                    <label class="fs-5 mb-2">ВКонтакте</label>
+                    <input class="form-control" id="vk-input" asp-for="UserProfile.Contact.VkLink"/>
+                </div>
+                <div class="flex-grow-1 ms-5">
+                    <label class="fs-5 mb-2">Инстаграм</label>
+                    <input class="form-control" id="inst-input" asp-for="UserProfile.Contact.InstagramLink"/>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <div class="flex-grow-1  me-5">
+                    <label class="fs-5 mb-2">Телеграм</label>
+                    <input class="form-control" id="tg-input" asp-for="UserProfile.Contact.TelegramLink"/>
+                </div>
+                <div class="flex-grow-1 ms-5">
+                    <label class="fs-5 mb-2">Ютуб</label>
+                    <input class="form-control" id="youtube-input" asp-for="UserProfile.Contact.YoutubeLink"/>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <div class="flex-grow-1  me-5">
+                    <label class="fs-5 mb-2">Твиттер</label>
+                    <input class="form-control" id="twitter-input" asp-for="UserProfile.Contact.TwitterLink"/>
+                </div>
+                <div class="flex-grow-1 ms-5">
+                    <label class="fs-5 mb-2">Фейсбук</label>
+                    <input class="form-control" id="fb-input" asp-for="UserProfile.Contact.FacebookLink"/>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            @Html.ValidationMessageFor(x => x.UserPhoto)
+            @Html.ValidationMessageFor(x => x.UserProfile)
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#input-img">
+                Сменить фотографию
+            </button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-secondary mt-5">
+                Сохранить
+            </button>
+        </div>
+    </form>
+</div>

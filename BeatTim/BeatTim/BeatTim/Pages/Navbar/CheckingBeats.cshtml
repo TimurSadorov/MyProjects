@@ -1,0 +1,24 @@
+﻿@page
+@model BeatTim.Pages.Navbar.CheckingBeats
+
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <h2>Биты для проверки</h2>
+        <div class="d-flex flex-column align-items-stretch" id="checked_beats_container">
+        </div>
+        <div class="d-flex flex-column align-items-center mt-4">
+            <span class="link" id="more_beats_button">Показать еще</span>
+        </div>
+    </div>
+</div>
+<form method="post" hidden></form>
+@{
+    await Html.RenderPartialAsync("Partials/Player");
+    await Html.RenderPartialAsync("Partials/SuccessModalNotification");
+}
+
+@section Scripts
+{
+    <script src="~/js/player.js"></script>
+    <script src="~/js/checkedBeats.js"></script>
+}

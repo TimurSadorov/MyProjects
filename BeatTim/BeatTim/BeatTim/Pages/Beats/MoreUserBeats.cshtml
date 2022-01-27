@@ -1,0 +1,130 @@
+﻿@page "{id:int}"
+@using System.Globalization
+@model BeatTim.Pages.Beats.MoreUserBeats
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Больше битов";
+}
+
+@{
+    var m = Html.RenderPartialAsync("Partials/SuccessModalNotification");
+}
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-end">
+            <div class="d-flex align-items-end">
+                @if (Model.UserProfile.UserPhotoLink is null)
+                {
+                    <img src="/img/user_photo/default.jpg" width="200px" height="200px" class="rounded-3"/>
+                }
+                else
+                {
+                    <img src="@Model.UserProfile.UserPhotoLink" width="200px" height="200px" class="rounded-3"/>
+                }
+                <span class="fs-3 ms-4">@Model.UserProfile.Nickname</span>
+            </div>
+            <div>
+                <div class="d-flex">
+                    @{
+                        var bs = Html.RenderPartialAsync("Partials/BeatSerch");
+                        var f = Html.RenderPartialAsync("Partials/DropdownFilters");
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-grow-1 mt-5">
+            <div class="d-flex flex-column align-items-stretch mb-3" id="container_beats">
+                @foreach (var beat in Model.PublicBeats.OrderByDescending(b => b.Title))
+                {
+                    var isRegistered = HttpContext.Items[nameof(UserToken)] is not null;
+                    var isInCart = Model.BeatsInCart?.Contains(beat.BeatId);
+                    var displayAddBtn = isInCart.HasValue && isInCart.Value ? "none" : "";
+                    var displayRemoveBtn = isInCart.HasValue && isInCart.Value ? "" : "none";
+                    <div class="beat">
+                        <div
+                            class="
+                                                                     d-flex
+                                                                     flex-row
+                                                                     beat-line-container
+                                                                     justify-content-between
+                                                                   mt-4"
+                            id="beat-@beat.UserId">
+                            <div class="d-flex align-items-center h-100">
+                                @if (beat.CoverLink is null)
+                                {
+                                    <img
+                                        class="beat_cover play_button h-100 rounded cursor-pointer"
+                                        src="~/img/user_beats_covers/default.jpg"
+                                        alt="Обложка бита"/>
+                                }
+                                else
+                                {
+                                    <img
+                                        class="beat_cover play_button h-100 rounded cursor-pointer"
+                                        src="@beat.CoverLink"
+                                        alt="Обложка бита"/>
+                                }
+                                <audio class="beat_audio" src="@beat.BeatLink"></audio>
+                                <span class="title_beat ms-3 fs-5" beat-id="@beat.Title">@beat.Title</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="d-flex flex-column justify-content-around me-5">
+                                    <span class="fs-14px" id="rating" data-number="@beat.Rating.ToString(CultureInfo.InvariantCulture)">Рейтинг: @beat.Rating</span>
+                                    @if (beat.NumberAuditions >= 10000)
+                                    {
+                                        <span class="fs-14px" id="number_auditions" data-number="@beat.NumberAuditions">Прослушивания: @(beat.NumberAuditions / 1000) тыс.</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="fs-14px" id="number_auditions" data-number="@beat.NumberAuditions">Прослушивания: @beat.NumberAuditions</span>
+                                    }
+                                </div>
+                                <div class="price me-4" id="price" data-number="@beat.Price">
+                                    @beat.Price
+                                    &#8381;
+                                </div>
+                                <div hidden class="publication_date">@beat.PublicationDate.ToString("yyyy-MM-ddTHH:mm:ss")</div>
+                                @if(Model.IsGuest)
+                                {
+                                    <div class="me-4">
+                                        <button data-is-registered="@isRegistered" data-beat-id="@beat.BeatId" class="add_beat_to_cart_btn btn btn-outline-success" style="display: @displayAddBtn">
+                                            <span>Добавить в корзину</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="pb-1" viewBox="0 0 16 16">
+                                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                                            </svg>
+                                        </button>
+                                        @if (HttpContext.Items[nameof(UserToken)] is not null)
+                                        {
+                                            <button data-beat-id="@beat.BeatId" class="remove_beat_to_cart_btn btn btn-outline-danger" style="display: @displayRemoveBtn">
+                                                <span>Убрать из корзины</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="pb-1" viewBox="0 0 16 16">
+                                                    <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+                                                </svg>
+                                            </button>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div id="page_id" page-id="@RouteData.Values["id"]" hidden></div>
+<form method="post" hidden></form>
+@{
+    var p = Html.RenderPartialAsync("Partials/Player");
+    await Task.WhenAll(bs, f, p, m);
+}
+
+@section Scripts
+{
+    <script src="~/js/buy_beat.js"></script>
+    <script src="~/js/filters.js"></script>
+    <script src="~/js/searchBeats.js"></script>
+    <script src="~/js/player.js"></script>
+}

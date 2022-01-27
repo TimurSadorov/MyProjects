@@ -1,0 +1,42 @@
+﻿@using System.Globalization
+@model IEnumerable<BeatTim.Services.OutputDTO.UserCommentDto>
+
+@foreach (var comment in Model)
+{
+    var culture = new CultureInfo("ru");
+    <div class="comment d-flex flex-column align-items-stretch mt-3">
+        <div class="d-flex flex-column bg-black p-4 rounded-3 border border-dark">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row h-40px">
+                    @if (comment.CommentatorPhotoLink is null)
+                    {
+                        <img class="h-100" src="/img/user_photo/default.jpg" alt="Аватарка"/>
+                    }
+                    else
+                    {
+                        <img class="h-100" src="@comment.CommentatorPhotoLink" alt="Аватарка"/>
+                    }
+                    <a class="d-flex align-items-center ms-3 fs-18px text-info text-decoration-none hover-grey text-decoration-hover" asp-page="@UserAccount.PathToPage"
+                       asp-route-id="@comment.CommentatorId">
+                        @comment.CommentatorNickname
+                    </a>
+                    <span class="fs-14px d-flex align-items-center pt-1 ms-4 text-muted"
+                          title="Дата публикации: @comment.PublicationDate.ToString("dd MMMM yyyy HH:mm", culture)">
+                        @comment.PublicationDate.ToString("dd MMMM yyyy HH:mm", culture)
+                    </span>
+                </div>
+                <div>
+                    @if (Context.Items[nameof(Admin)] is not null)
+                    {
+                        <div onclick="deleteComment($(this), @comment.CommentId)" class="btn btn-outline-danger">Удалить</div>
+                    }
+                    else
+                    {
+                        <button onclick="sendReport(@comment.CommentId)" type="button" class="btn btn-outline-danger">Пожаловаться</button>
+                    }
+                </div>
+            </div>
+            <p class="mt-4">@comment.CommentContent</p>
+        </div>
+    </div>
+}

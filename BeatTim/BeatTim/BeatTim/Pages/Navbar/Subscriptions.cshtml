@@ -1,0 +1,22 @@
+﻿@page
+@model BeatTim.Pages.Navbar.Subscriptions
+
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <h2>Подписки</h2>
+        <div class="d-flex justify-content-center flex-grow-1 mt-4">
+            <input id="search_subscriptions" type="text" placeholder="Кого ищем?"
+                   oninput="search($(this).val().toLowerCase(), $('#container_subscriptions'), 'username')"/>
+        </div>
+        <div class="row row-cols-4" id="container_subscriptions">
+        </div>
+        <span class="d-flex justify-content-center cursor-pointer hover-grey mt-5" id="more_subscriptions_button">Показать еще</span>
+    </div>
+</div>
+<form method="post" hidden></form>
+
+@section Scripts
+{
+    <script src="~/js/search.js"></script>
+    <script src="~/js/moreSubscriptions.js"></script>
+}

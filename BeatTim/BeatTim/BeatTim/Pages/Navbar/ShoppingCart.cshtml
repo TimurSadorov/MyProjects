@@ -1,0 +1,35 @@
+﻿@page
+@model BeatTim.Pages.Navbar.ShoppingCart
+
+@{
+    var listPartials = new List<Task>();
+}
+
+@{listPartials.Add(Html.RenderPartialAsync("Partials/SuccessModalNotification"));}
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <h2>
+            Корзина
+        </h2>
+        @if (Model.Beats.Any())
+        {
+            listPartials.Add(Html.RenderPartialAsync("AddedBits"));
+        }
+        else
+        {
+            listPartials.Add(Html.RenderPartialAsync("EmptyCart"));
+        }
+    </div>
+</div>
+<form method="post" hidden></form>
+@{
+    listPartials.Add(Html.RenderPartialAsync("Partials/Player"));
+    await Task.WhenAll(listPartials);
+}
+
+@section Scripts
+{
+    <script src="~/js/player.js"></script>
+    <script src="~/js/buy_beat.js"></script>
+    <script src="~/js/cart.js"></script>
+}

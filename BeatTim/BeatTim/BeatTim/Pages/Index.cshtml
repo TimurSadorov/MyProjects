@@ -1,0 +1,101 @@
+﻿@page
+@model BeatTim.Pages.Index
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Рекомендации";
+}
+
+
+<div class="container-xl">
+    <div class="flex-container">
+        <h2 class="recomrecommendation-titlee">Рекомендации</h2>
+        <div class="recommendations">
+            @foreach (var beats in Model.TopBeats)
+            {
+                if (beats.Value.Any())
+                {
+                    var title = string.IsNullOrEmpty(beats.Key) ? "Не имеют определенного направления" : beats.Key;
+                    <section class="recommendation-direction">
+                        <div class="flex-space-between">
+                            <h4 class="direction-name">@title</h4>
+                            <div class="flip-buttons">
+                                <button class="carousel-control-prev beats" id="carousel-prev" type="button" data-bs-target="#carousel_@beats.Key" data-bs-slide="prev">
+                                    <span
+                                        class="carousel-control-prev-icon beats"
+                                        aria-hidden="true">
+                                    </span>
+                                    <span class="visually-hidden">Предыдущий</span>
+                                </button>
+                                <button class="carousel-control-next beats" type="button" data-bs-target="#carousel_@beats.Key" data-bs-slide="next">
+                                    <span
+                                        class="carousel-control-next-icon beats"
+                                        aria-hidden="true">
+                                    </span>
+                                    <span class="visually-hidden">Следующий</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="carousel_@beats.Key" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                @{
+                                    var amountBeats = beats.Value.Count();
+                                    var amountCarouselItems = amountBeats % 5 == 0 ? amountBeats / 5 : amountBeats / 5 + 1;
+                                    for (var t = 0; t < amountCarouselItems; t++)
+                                    {
+                                        var active = t == 0 ? "active" : "";
+                                        var amountBeat = 0;
+                                        <div class="carousel-item @active">
+                                            <div class="row">
+                                                @foreach (var beat in beats.Value.Skip(t * 5).Take(5))
+                                                {
+                                                    amountBeat++;
+                                                    <div class="col beat" data-beat-id="@beat.BeatId">
+                                                        <div class="card beatmaker">
+                                                            @if (beat.CoverLink is null)
+                                                            {
+                                                                <img src="/img/user_beats_covers/default.jpg" class="mw-240px beat_cover play_button cursor-pointer" alt="Обложка"/>
+                                                            }
+                                                            else
+                                                            {
+                                                                <img src="@beat.CoverLink" class="mw-240px beat_cover play_button cursor-pointer" alt="Обложка"/>
+                                                            }
+                                                            <audio src="@beat.BeatLink"></audio>
+                                                            <h5 class="beat-name title_beat">@beat.Title</h5>
+                                                            <a asp-page="@UserAccount.PathToPage" class="card-text text-decoration-none text-white hover-grey"
+                                                               asp-route-id="@beat.UserId">@beat.UserName</a>
+                                                            @if (beat.NumberAuditions >= 10000)
+                                                            {
+                                                                <span class="card-beat-popularity">Прослушивания: @(beat.NumberAuditions / 1000) тыс. </span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="card-beat-popularity">Прослушивания: @beat.NumberAuditions</span>
+                                                            }
+                                                            <span class="card-beat-popularity">Рейтинг: @beat.Rating</span>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                @for (var j = 0; j < 5 - amountBeat; j++)
+                                                {
+                                                    <div class="col"></div>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </section>
+                }
+            }
+        </div>
+    </div>
+</div>
+<form method="post" hidden></form>
+@{ await Html.RenderPartialAsync("Partials/Player");}
+
+@section Scripts
+{
+    <script src="/js/player.js"></script>
+}

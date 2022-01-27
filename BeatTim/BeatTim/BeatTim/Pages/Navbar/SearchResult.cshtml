@@ -1,0 +1,77 @@
+﻿@model Search
+@{
+    var beats = Model.Beats;
+    var beatmakers = Model.Beatmakers;
+}
+
+@if (beats.Count > 0 || beatmakers.Count > 0)
+{
+    for (int amountBeats = 0, amountBeatmakers = 0; amountBeats < beats.Count || amountBeatmakers < beatmakers.Count;)
+    {
+        if (amountBeatmakers >= beatmakers.Count || amountBeats < beats.Count &&
+            beats[amountBeats].Title.CompareTo(beatmakers[amountBeatmakers].UserNickname) > 0)
+        {
+            var beat = beats[amountBeats];
+            <div class="col beat">
+                <div class=" d-flex flex-column align-items-center border border-dark bg-black p-4">
+                    @if (beat.CoverLink is null)
+                    {
+                        <img onclick="playNewBeat($(this))" src="/img/user_beats_covers/default.jpg" class="mw-240px beat_cover play_button cursor-pointer" alt="Обложка"/>
+                    }
+                    else
+                    {
+                        <img onclick="playNewBeat($(this))" src="@beat.CoverLink" class="mw-240px beat_cover play_button cursor-pointer" alt="Обложка"/>
+                    }
+                    <audio src="@beat.BeatLink"></audio>
+                    <h5 class="beat-name title_beat mt-2">@beat.Title</h5>
+                    <a asp-page="@UserAccount.PathToPage" class="card-text text-decoration-none text-info hover-grey"
+                       asp-route-id="@beat.UserId">
+                        @beat.UserName
+                    </a>
+                    @if (beat.NumberAuditions >= 10000)
+                    {
+                        <span class="card-beat-popularity">Прослушивания: @(beat.NumberAuditions / 1000) тыс. </span>
+                    }
+                    else
+                    {
+                        <span class="card-beat-popularity">Прослушивания: @beat.NumberAuditions</span>
+                    }
+                    <span class="card-beat-popularity">Рейтинг: @beat.Rating</span>
+                </div>
+            </div>
+            amountBeats++;
+        }
+        else
+        {
+            var beatmaker = beatmakers[amountBeatmakers];
+            <div class="col">
+                <div class=" d-flex flex-column align-items-center border border-dark bg-black p-4">
+                    <div class="d-flex flex-column align-items-center mw-200px">
+                        @if (beatmaker.UserPhotoLink is not null)
+                        {
+                            <a asp-page="@UserAccount.PathToPage" asp-route-id="@beatmaker.UserId">
+                                <img src="@beatmaker.UserPhotoLink" width="240" class="rounded-3 mt-2"/>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-page="@UserAccount.PathToPage" asp-route-id="@beatmaker.UserId">
+                                <img src="~/img/user_photo/default.jpg" width="240" class="rounded-3 mt-2"/>
+                            </a>
+                        }
+                        <a asp-page="@UserAccount.PathToPage" asp-route-id="@beatmaker.UserId" class="username mt-2 text-decoration-none text-info hover-grey fs-5">@beatmaker.UserNickname</a>
+                        @if (beatmaker.TotalNumberAuditions < 10000)
+                        {
+                            <span class="mt-3">Общее количество прослушиваний: @beatmaker.TotalNumberAuditions</span>
+                        }
+                        else
+                        {
+                            <span class="mt-3">Общее количество прослушиваний: @(beatmaker.TotalNumberAuditions / 1000) тыс.</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            amountBeatmakers++;
+        }
+    }
+}
