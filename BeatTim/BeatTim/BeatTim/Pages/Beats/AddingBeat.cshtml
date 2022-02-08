@@ -1,0 +1,79 @@
+﻿@page
+@model BeatTim.Pages.Beats.AddingBeat
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Добавление бита";
+}
+
+
+<div class="container-xl">
+    <form id="form_adding_beat" method="post" class="d-flex flex-column" enctype="multipart/form-data">
+        <div class="d-flex align-items-end justify-content-center">
+            <div>
+                <img class="rounded-3" width="200" id="preview_cover" src="~/img/user_beats_covers/default.jpg" alt="Обложка"/>
+            </div>
+            <div class="ms-5 d-flex flex-column align-items-center">
+                <span id="error_message_cover" class="text-danger mb-3"></span>
+                <div class="d-flex ">
+                    <button id="add_cover_button" class="btn btn-outline-secondary">Добавить обложку</button>
+                </div>
+                <input id="input_cover" type="file" accept="image/jpeg,image/jpg,image/pjpeg,image/png" hidden/>
+                <input asp-for="Cover" id="input_cover_final" type="file" hidden/>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+            <div class="d-flex flex-column">
+                <label class="d-flex fs-5">Название</label>
+                <input asp-for="NewBeat.Title" class="mt-2 fs-5" type="text" placeholder="Введите название"/>
+                <span class="text-danger" asp-validation-for="NewBeat.Title"></span>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center">
+                <div>
+                    <img id="unloaded_img" src="/img/icons8-error-64.png" alt="error" width="30px"/>
+                    <img id="loaded_img" src="/img/icons8-ok-64.png" alt="ok" width="36px" style="display: none;"/>
+                    <button id="add_audio_button" class="btn btn-outline-secondary ms-2">Загрузить в wav или mp3</button>
+                </div>
+                <input id="input_audio" class="mt-5" type="file" accept="audio/wav,audio/mp3" hidden/>
+                <input asp-for="NewBeat.Audio" id="input_audio_final" class="mt-5" type="file" accept="audio/wav,audio/mp3" hidden/>
+                <span id="error_message_audio" class="text-danger"></span>
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(m => m.NewBeat.Audio)
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <div class="d-flex flex-column">
+                <label class="fs-5 mb-2">Направление</label>
+                <div>
+                    <select asp-for="NewBeat.GenreName" class="form-select form-select">
+                        <option value=""></option>
+                        @foreach (var genre in Model.Genres)
+                        {
+                            <option value="@genre.Name">@genre.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+                <label class="fs-5">Цена</label>
+                <div>
+                    <input asp-for="NewBeat.Price" type="number" class="mt-2 fs-5"/><span class="ms-1 fs-4">₽</span>
+                </div>
+                <span class="text-danger" asp-validation-for="NewBeat.Price"></span>
+            </div>
+        </div>
+        <div class="mt-3 text-danger d-flex justify-content-center">
+            @Html.ValidationMessageFor(m => m.NewBeat)
+            @Html.ValidationMessageFor(m => m.Cover)
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <button class="btn btn-outline-secondary" type="submit" id="add_beat_btn">Добавить бит</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/addingBeat.js"></script>
+}

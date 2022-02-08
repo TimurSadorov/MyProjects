@@ -1,0 +1,66 @@
+CREATE TYPE client_role AS ENUM('user', 'admin');
+
+CREATE TABLE client(
+	client_id SERIAL PRIMARY KEY,
+	client_role client_role
+);
+CREATE TABLE login_details(
+	login_details SERIAL PRIMARY KEY,
+	client_id INTEGER NOT NULL,
+	login VARCHAR(100),
+	hashed_password VARCHAR(100),
+	FOREIGN KEY (client_id) REFERENCES client(client_id) ON DELETE CASCADE
+);
+CREATE TABLE user_comment(
+	user_comment_id SERIAL PRIMARY KEY,
+	commentator_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE,
+	commented_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE,
+	comment_content VARCHAR,
+	publication_date DATE NOT NULL,
+	is_under_consideration BOOL NOT NULL
+);
+CREATE TABLE genre(
+	genre_id SERIAL PRIMARY KEY,
+	genre_name VARCHAR(60)
+);
+CREATE TYPE verification_status AS ENUM('verified', 'unverified');
+CREATE TABLE beat(
+	beat_id SERIAL PRIMARY KEY,
+	client_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE,
+	title VARCHAR(100),
+	cover_link VARCHAR,
+	beat_link VARCHAR NOT NULL,
+	genre_id INTEGER REFERENCES genre(genre_id) ON DELETE SET NULL,
+	price INTEGER CONSTRAINT beat_price_greater_zero CHECK(price >= 0),
+	publication_date DATE NOT NULL,
+	verification_status verification_status,
+	number_auditions INTEGER CONSTRAINT beat_number_auditions_greater_zero CHECK(number_auditions >= 0),
+	rating decimal(2, 2) CONSTRAINT beat_rating_greater_zero CHECK(number_auditions >= 0 AND number_auditions <= 10)
+);
+CREATE TABLE follower(
+	follower_id SERIAL PRIMARY KEY,
+	user_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE,
+	subscriber_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE
+);
+CREATE TABLE City(
+	city_id SERIAL PRIMARY KEY,
+	city_name VARCHAR(200)
+);
+CREATE TABLE Contacts(
+	contacts_id SERIAL PRIMARY KEY,
+	vk_link VARCHAR,
+	instagram_link VARCHAR,
+	telegram_link VARCHAR,
+	twitter_link VARCHAR,
+	youtube_link VARCHAR,
+	facebook_link VARCHAR
+);
+CREATE TABLE User_profile(
+	user_profile_id SERIAL PRIMARY KEY,
+	nickname VARCHAR(100),
+	client_id INTEGER NOT NULL REFERENCES client(client_id) ON DELETE CASCADE,
+	user_photo_link VARCHAR,
+	city_id INTEGER REFERENCES city(city_id) ON DELETE SET NULL,
+	about_me VARCHAR,
+	contacts_id INTEGER REFERENCES contacts(contacts_id) ON DELETE SET NULL
+);

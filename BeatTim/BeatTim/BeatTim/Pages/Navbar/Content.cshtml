@@ -1,0 +1,33 @@
+﻿@model Subscriptions
+
+
+@foreach (var subscription in Model.AllSubscriptions.OrderByDescending(s => s.TotalNumberAuditions))
+{
+    <div class="col mt-5">
+        <div class=" d-flex flex-column align-items-center border border-dark bg-black p-4">
+            <div class="d-flex flex-column align-items-center mw-200px">
+                @if (subscription.UserPhotoLink is not null)
+                {
+                    <a asp-page="@UserAccount.PathToPage" asp-route-id="@subscription.UserId">
+                        <img src="@subscription.UserPhotoLink" width="200" class="rounded-3 mt-2"/>
+                    </a>
+                }
+                else
+                {
+                    <a asp-page="@UserAccount.PathToPage" asp-route-id="@subscription.UserId">
+                        <img src="~/img/user_photo/default.jpg" width="200" class="rounded-3 mt-2"/>
+                    </a>
+                }
+                <a asp-page="@UserAccount.PathToPage" asp-route-id="@subscription.UserId" class="username mt-2 text-decoration-none text-info hover-grey fs-5">@subscription.UserNickname</a>
+                @if (subscription.TotalNumberAuditions < 10000)
+                {
+                    <span class="mt-3">Общее количество прослушиваний: @subscription.TotalNumberAuditions</span>
+                }
+                else
+                {
+                    <span class="mt-3">Общее количество прослушиваний: @(subscription.TotalNumberAuditions / 1000) тыс.</span>
+                }
+            </div>
+        </div>
+    </div>
+}

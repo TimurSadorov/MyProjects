@@ -1,0 +1,202 @@
+@page
+@using BeatTim.Models
+@using System.Globalization
+@model BeatTim.Pages.Beats.EditingBeats
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Редактирование битов";
+}
+
+
+<div class="modal fade" id="confirmation" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark">
+            <div class="modal-body border border-dark rounded">
+                <div class="container-fluid">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-center p-2 mb-2">
+                            <h5>Вы действительно хотите удалить бит?</h5>
+                        </div>
+                        <div class="d-flex justify-content-around m-4">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="yes">Да</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal_change_price" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark">
+            <div class="modal-body border border-dark rounded">
+                <div class="container-fluid">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-center p-2 mb-2">
+                            <h5>Установите новую цену</h5>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <div>
+                                <input type="number" id="input_price"/><span class="m-2 fs-18px">&#8381;</span>
+                            </div>
+                            <span class="text-danger fs-14px mt-1" id="error_message_for_price"></span>
+                        </div>
+                        <div class="d-flex justify-content-around m-4">
+                            <button type="button" class="btn btn-secondary" id="confirm_price" beat-id="0" disabled="true">Установить</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal_change_title" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark">
+            <div class="modal-body border border-dark rounded">
+                <div class="container-fluid">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-center p-2 mb-2">
+                            <h5>Укажите новое название</h5>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <input type="text" id="input_title"/>
+                            <span class="text-danger fs-14px mt-1" id="error_message_for_title"></span>
+                        </div>
+                        <div class="d-flex justify-content-around m-4">
+                            <button type="button" class="btn btn-secondary" id="confirm_title" disabled>Переименовать</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    var m =  Html.RenderPartialAsync("Partials/SuccessModalNotification");
+}
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <div class="d-flex  justify-content-between">
+            <div class="d-flex">
+                @{
+                    var bs = Html.RenderPartialAsync("Partials/BeatSerch");
+                    var f = Html.RenderPartialAsync("Partials/DropdownFilters");
+                }
+            </div>
+            <div>
+                <a asp-page="@AddingBeat.PathToPage" class="btn btn-outline-success">Добавить бит</a>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-grow-1 mt-5">
+            <div class="d-flex flex-column align-items-stretch mb-3" id="container_beats">
+                @foreach (var beat in Model.Beats.OrderByDescending(b => b.Title))
+                {
+                    <div class="beat">
+                        <div
+                            class="
+                                                             d-flex
+                                                             flex-row
+                                                             beat-line-container
+                                                             justify-content-between
+                                                           mt-4"
+                            id="beat-@beat.BeatId">
+                            <div class="d-flex align-items-center h-100">
+                                @if (beat.CoverLink is null)
+                                {
+                                    <img
+                                        class="beat_cover play_button h-100 rounded cursor-pointer"
+                                        src="~/img/user_beats_covers/default.jpg"
+                                        alt="Обложка бита"/>
+                                }
+                                else
+                                {
+                                    <img
+                                        class="beat_cover play_button h-100 rounded cursor-pointer"
+                                        src="@beat.CoverLink"
+                                        alt="Обложка бита"/>
+                                }
+                                <audio class="beat_audio" src="@beat.BeatLink" crossOrigin="anonymous"></audio>
+                                <span class="title_beat ms-3 fs-5 cursor-pointer hover-grey" beat-id="@beat.BeatId" title="Сменить название">@beat.Title</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="d-flex flex-column justify-content-around me-5">
+                                    <span class="fs-14px" id="rating" data-number="@beat.Rating.ToString(CultureInfo.InvariantCulture)">Рейтинг: @beat.Rating</span>
+                                    @if (beat.NumberAuditions >= 10000)
+                                    {
+                                        <span class="fs-14px" id="number_auditions" data-number="@beat.NumberAuditions">Прослушивания: @(beat.NumberAuditions / 1000) тыс.</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="fs-14px" id="number_auditions" data-number="@beat.NumberAuditions">Прослушивания: @beat.NumberAuditions</span>
+                                    }
+                                </div>
+                                <div class="price me-4 hover-grey cursor-pointer" id="price" data-number="@beat.Price" title="Сменить цену" beat-id=@beat.BeatId>
+                                    @beat.Price
+                                    &#8381;
+                                </div>
+                                <div hidden class="publication_date">@beat.PublicationDate.ToString("yyyy-MM-ddTHH:mm:ss")</div>
+                                <div class="delete_beat_button" beat-id=@beat.BeatId title="Удалить">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="hover-red cursor-pointer" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                                </div>
+                                @switch (beat.VerificationStatus)
+                                {
+                                    case VerificationStatus.Approved:
+                                        <div class="me-4" title="Одобрено">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
+                                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                            </svg>
+                                        </div>
+                                        break;
+                                    case VerificationStatus.Refused:
+                                        <div class="me-4" title="Не одобрено">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="125" fill="red" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                            </svg>
+                                        </div>
+                                        break;
+                                    case VerificationStatus.Unverified:
+                                        <div class="me-4" title="На рассмотрение">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 width="23" height="23" viewBox="0 0 79.537 79.536" fill="yellow">
+                                                <path d="M77.634,12.821l-9.911-9.958c-1.372-1.385-4.097-0.901-6.069,1.062l-9.088,9.057L40.064,0H1.122
+                                                     		v79.536h61.268V32.987l14.167-14.11C78.514,16.914,79.011,14.198,77.634,12.821z M41.107,10.377l6.887,7.159l-3.77,3.759h-3.117
+                                                     		V10.377z M42.539,48.934l-13.711,5.551l-2.944-2.962l5.601-13.691L42.539,48.934z M55.937,73.089H7.569V6.447h28.702v19.682h3.102
+                                                     		l-3.674,3.656H14.453v3.223H32.47l-2.913,2.895l-2.967,7.263H14.453v3.226h10.822l-4.158,10.154h-6.665v3.221h34.618v-3.221H30.401
+                                                     		l14.045-5.69l4.479-4.464h0.14v-0.14l6.866-6.838v33.676H55.937z"/>
+
+                                            </svg>
+                                        </div>
+                                        break;
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <form method="post"></form>
+</div>
+@{
+    var p = Html.RenderPartialAsync("Partials/Player");
+    await Task.WhenAll(bs, f, m, p);
+}
+
+
+@section Scripts
+{
+    <script src="~/js/filters.js"></script>
+    <script src="~/js/searchBeats.js"></script>
+    <script src="~/js/editingBeats.js"></script>
+    <script src="~/js/player.js"></script>
+}

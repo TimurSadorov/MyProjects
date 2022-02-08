@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\contr\Inde.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="Pages\Account\TopFiveBeates.cshtml">
+        <DependentUpon>UserAccount.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Account\EditBox.cshtml">
+        <DependentUpon>EditingProfile.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Account\UserProfile.cshtml">
+        <DependentUpon>UserAccount.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Account\UserProfileEditing.cshtml">
+        <DependentUpon>EditingProfile.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Account\Comments.cshtml">
+        <DependentUpon>UserAccount.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\BeatsForChart.cshtml">
+        <DependentUpon>ChartBeats.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\Content.cshtml">
+        <DependentUpon>Subscriptions.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\AddedBits.cshtml">
+        <DependentUpon>ShoppingCart.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\EmptyCart.cshtml">
+        <DependentUpon>ShoppingCart.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\SearchResult.cshtml">
+        <DependentUpon>Search.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\BeatsContent.cshtml">
+        <DependentUpon>CheckingBeats.cshtml</DependentUpon>
+      </Content>
+      <Content Update="Pages\Navbar\CommentsContent.cshtml">
+        <DependentUpon>CheckingComments.cshtml</DependentUpon>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Pages\Navbar\Subscriptions.cshtml.cs">
+        <DependentUpon>Subscriptions.cshtml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

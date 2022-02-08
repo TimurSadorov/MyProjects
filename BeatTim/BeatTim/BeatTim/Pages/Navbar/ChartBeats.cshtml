@@ -1,0 +1,32 @@
+﻿@page
+@model BeatTim.Pages.Navbar.ChartBeats
+
+@{
+    Layout = "_Layout";
+    var listPartials = new List<Task>();
+}
+
+@{listPartials.Add(Html.RenderPartialAsync("Partials/SuccessModalNotification"));}
+<div class="container-xl">
+    <div class="d-flex flex-column">
+        <h2 >Чарт битов</h2>
+        <div class="d-flex flex-column flex-grow-1 mt-4">
+            <div class="d-flex flex-column align-items-stretch mb-3" id="container_beats">
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-4">
+            <span class="link" id="more_beats_button">Показать еще</span>
+        </div>
+    </div>
+</div>
+<form method="post" hidden></form>
+@{
+    listPartials.Add(Html.RenderPartialAsync("Partials/Player"));
+    await Task.WhenAll(listPartials);
+}
+@section Scripts
+{
+    <script src="~/js/player.js"></script>
+    <script src="~/js/buy_beat.js"></script>
+    <script src="~/js/moreBeats.js"></script>
+}

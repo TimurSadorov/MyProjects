@@ -1,0 +1,346 @@
+﻿html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #0c0c0c;
+  color: white;
+  margin-bottom: 150px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.registration_text {
+  color: white;
+}
+
+.form-group.registration {
+  width: 360px;
+  padding: 10px;
+}
+
+.registration_head {
+  margin: 20px 0 10px;
+}
+
+.registration_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn.btn-primary.registration {
+  margin-top: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: white;
+}
+
+.btn.btn-primary.registration:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in 0.1s;
+}
+
+.container-xl.registration {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.already_have_account {
+  margin-top: 17px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.already_have_account:hover {
+  color: #949494;
+  transition: all 0.3s ease-out 0s;
+}
+
+.btn.btn-outline-secondary.registration {
+  margin: 0 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_page {
+  margin: 40px 0 100px;
+}
+
+.card.beatmaker {
+  background-color: inherit;
+  border: none;
+}
+
+.beat-name {
+  margin-top: 3px;
+}
+
+.card-beat-popularity {
+  color: #5a5a5a;
+}
+
+.recomrecommendation-titlee {
+  margin-bottom: 10px;
+}
+
+.recommendation-direction:first-child {
+  margin-top: 25px;
+}
+
+.recommendation-direction {
+  margin-top: 50px;
+}
+
+.direction-name {
+  margin-bottom: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: relative;
+}
+
+.flip-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 75px;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-control-prev.beats,
+.carousel-control-next.beats {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 70%;
+}
+
+.carousel-control-next-icon.beats,
+.carousel-control-prev-icon.beats {
+  height: 60%;
+}
+
+.container {
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.footer-main {
+  background-color: #212529;
+}
+
+.copyright {
+  color: white;
+}
+
+.contacts-container {
+  display: flex;
+}
+
+.contact-item {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.contact-item.tg {
+  width: 45px;
+}
+
+.contact-item.inst {
+  margin: 0;
+}
+
+.bi.bi-person-circle {
+  fill: #5a5a5a;
+  width: 25px;
+  height: 25px;
+}
+
+.bi.bi-person-circle:hover {
+  fill: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-img-top.profile {
+  width: 300px;
+}
+
+.card.border-dark.mb-3.profile {
+  padding: 20px;
+  background-color: black;
+}
+
+.profile-contact {
+  text-decoration: none;
+  margin-top: 8px;
+  color: #5a5a5a;
+  fill: #5a5a5a;
+}
+
+.profile-contact:hover {
+  color: rgba(255, 255, 255, 0.75);
+  fill: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-name-profile {
+  margin-left: 10px;
+}
+
+.card-body.profile {
+  padding: 10px 0;
+}
+
+.ml-100px {
+  margin-left: 100px;
+}
+
+.beat-line-container {
+  background-color: black;
+  height: 60px;
+  border-radius: 3px;
+  border: solid 2px #212529;
+}
+
+.link {
+  color: #5a5a5a;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease-in-out;
+}
+
+.h-40px {
+  height: 40px;
+}
+
+.fs-18px {
+  font-size: 18px;
+}
+.fs-16px{
+  font-size: 16px;
+}
+.fs-14px{
+  font-size: 14px;
+}
+
+.fs-10px{
+  font-size: 10px;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.border-black{
+  border-color: #8e8e8e;
+}
+
+.hover-grey:hover{
+  color: #4e555b !important; 
+  transition: all 0.3s ease-in-out 0ms;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.delete_beat_button{
+  margin-right: 20px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.h-60px{
+  height: 75px;
+}
+
+.h-3px{
+  height: 4px;
+}
+
+.h-50px{
+  height: 50px;
+}
+
+.time_scrolling{
+  cursor: pointer;
+}
+
+.time_scrolling_container{
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+}
+
+.time_scrolling_container:hover .time_scrolling{
+  background-color: #484848;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.player_content{
+  position: relative;
+  top: -15px;
+}
+
+.w-0{
+  width: 0;
+}
+
+.mw-240px{
+  max-width: 240px;
+}
+
+.w-35{
+  width: 35%;
+}
+
+.hover-red:hover{
+  color: #f60000;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.text-decoration-hover:hover{
+  text-decoration: underline !important;
+  transition: all 0.3s ease-in-out 0s;
+}
+.mw-200px{
+ max-width: 200px; 
+}
+
+.p-100px{
+  padding-top: 100px;
+}
+
+.h-48px{
+  height: 48px;
+}

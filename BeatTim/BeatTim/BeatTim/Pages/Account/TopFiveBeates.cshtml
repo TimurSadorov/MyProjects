@@ -1,0 +1,72 @@
+﻿@using BeatTim.Pages.Beats
+@model UserAccount
+
+<div class="d-flex flex-column flex-grow-1 ml-100px">
+    <h3>Топ-5 битов по прослушиваниям</h3>
+    <div class="d-flex flex-column mt-4">
+        @{
+            var place = 1;
+            foreach (var beat in Model.VerifiedBeats.OrderByDescending(b => b.NumberAuditions).Take(5))
+            {
+                <div class="beat">
+                    <div class="d-flex flex-column align-items-stretch mb-3">
+                        <div
+                            class="
+                                             d-flex
+                                             flex-row
+                                             beat-line-container
+                                             justify-content-between
+                                           ">
+                            <div class="d-flex align-items-center h-100">
+                                <span class="ms-4 fs-18px">@place.</span>
+                                @if (beat.CoverLink is not null)
+                                {
+                                    <img
+                                        class="beat_cover play_button ms-4 h-100 rounded cursor-pointer"
+                                        src="@beat.CoverLink"
+                                        alt="Обложка бита"/>
+                                }
+                                else
+                                {
+                                    <img
+                                        class="beat_cover play_button ms-4 h-100 rounded cursor-pointer"
+                                        src="/img/user_beats_covers/default.jpg"
+                                        alt="Обложка бита"/>
+                                }
+                                <span class="ms-3 fs-5 title_beat">@beat.Title</span>
+                                <audio id="beat_audio" src="@beat.BeatLink"></audio>
+                            </div>
+                            <div
+                                class="d-flex flex-column justify-content-around me-4">
+                                <span class="fs-14px">Рейтинг: @beat.Rating</span>
+                                @if (beat.NumberAuditions >= 10000)
+                                {
+                                    <span class="fs-14px">Прослушивания: @(beat.NumberAuditions / 1000) тыс. </span>
+                                }
+                                else
+                                {
+                                    <span class="fs-14px">Прослушивания: @beat.NumberAuditions</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                place++;
+            }
+        }
+    </div>
+    @if (Model.VerifiedBeats.Count() > 5)
+    {
+        <div class="d-flex flex-column align-items-center mt-2">
+            <a asp-page="@MoreUserBeats.PathToPage" class="link" asp-route-id="@Model.UserProfile.ClientId">Смотреть больше</a>
+        </div>
+    }
+    @if (!Model.IsGuest)
+    {
+        <div class="d-inline-flex justify-content-center mt-5">
+            <a href="@EditingBeats.PathToPage" class="btn btn-outline-info">
+                Редактировать
+            </a>
+        </div>
+    }
+</div>

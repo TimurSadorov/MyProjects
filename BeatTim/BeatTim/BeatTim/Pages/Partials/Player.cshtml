@@ -1,0 +1,32 @@
+﻿<div>
+    <div id="opened_player" class="fixed-bottom h-60px w-100 bg-black" style="display: none;">
+        <div class="container-xl d-flex flex-column">
+            <div id="time_scrolling" class="time_scrolling_container">
+                <div class="time_scrolling">
+                    <div id="progressbar_player" class="bg-white h-3px rounded-3 cursor-pointer"></div>
+                </div>
+            </div>
+            <div class="player_content d-flex align-items-center justify-content-between">
+                <div class="h-50px">
+                    <img
+                        id="img_player"
+                        class="button_play h-100 rounded"
+                        src="~/img/user_beats_covers/default.jpg"
+                        alt="Обложка бита"/>
+                    <span class="ms-3 fs-5" id="title_player">Название бита</span>
+                </div>
+                <audio id="audio_player" loop></audio>
+                <div>
+                    <svg class="cursor-pointer" id="pause_svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
+                    </svg>
+                    <svg class="cursor-pointer" id="play_svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
